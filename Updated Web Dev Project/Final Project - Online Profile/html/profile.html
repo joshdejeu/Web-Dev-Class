@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../css/tags.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/mid.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="icon" href="../images/tabicon.png">
+    <meta charset="utf-8">
+    <title>Josh's Resume</title>
+  </head>
+  <body>
+
+
+    <div id="chatbot" class="chatbot">
+      <div class="chatbot-header">
+
+        <div class="chatbot-profile">
+          <div class="chatbot-profile-pic"></div>
+          <div class="chatbot-profile-status"></div>
+        </div>
+
+        <div class="chatbot-header-text">
+          <p class="chatbot-header-name">Josh Bot</p>
+          <p class="chatbot-status-text">Online</p>
+        </div>
+
+        <div class="chatbot-exit" onclick="notVisible()">&#xd7;</div>
+      </div>
+
+      <div class="chatbot-body">
+        <p id="currentTime">00:00 AM</p>
+        <div class="chatbot-botext">What can I help you with?</div>
+        <p id="currentTime2">00:00 AM</p>
+        <div id="reply" class="chatbot-user-reply"></div>
+      </div>
+      <div class="chatbot-footer">
+        <input id="message" class="chatbot-input" type="text" placeholder="Send a message"="" value="">
+        <div class="chatbot-send" onclick="sendText()"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    function notVisible(){
+      document.getElementById("chatbot").style.visibility="hidden";
+      document.getElementById("reply").style.visibility="hidden"
+      document.getElementById("currentTime2").style.visibility="hidden";
+      document.getElementById("pseudoChatbot").style.visibility="visible";
+
+    }
+    function Visible(){
+      document.getElementById("pseudoChatbot").style.visibility="hidden";
+      document.getElementById("chatbot").style.visibility="visible";
+      document.getElementById("chatbot").style.animation="ease chatboxrise 1.0s forwards";
+    }
+    var current = new Date();
+    var time = current.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    /* by default displays HH:MM:SS but formated to onyl show hour and minutes */
+    document.getElementById("currentTime").innerHTML = time;
+    document.getElementById("currentTime2").innerHTML = time;
+
+    /* get the text with the id currentTime and change it ot the time */
+
+    function sendText() {
+      var reply = document.getElementById("message").value;
+      document.getElementById("reply").innerHTML = reply;
+      document.getElementById("reply").style.visibility="visible";
+      document.getElementById("currentTime2").style.visibility="visible";
+
+    }
+    </script>
+
+    <header>
+      <div class="allheaderitems">
+        <div class="header-gap"></div>
+
+        <div class="head-button-container1">
+          <div class="head-name">JOSH</div>
+        </div>
+
+        <script src="" charset="utf-8">
+        var elmnt1 = document.getElementById("projects");
+        elmnt1.scrollIntoView();
+        elmnt1.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        </script>
+
+        <div class="head-button-container2">
+          <div id="head-button" class="head-button1" onClick="document.getElementById('pic').scrollIntoView();">About Me</div>
+          <div id="head-button" class="head-button2" onClick="document.getElementById('experience').scrollIntoView();">Experience</div>
+          <div id="head-button" class="head-button3" onClick="document.getElementById('projects').scrollIntoView();">Projects</div>
+          <div id="head-button" class="head-button4" onClick="document.getElementById('Contacts').scrollIntoView();">Contacts</div>
+        </div>
+
+        <div class="header-gap"></div>
+      </div>
+    </header>
+
+    <div class="mid">
+
+      <div class="mid-block1">
+        <div class="header-space"></div><!-- space bc of header overlap-->
+        <div class="info"><!-- Space above 3 pictures -->
+          <h1 id="info-text1">Hi, I am Josh, a<br>website developer</h1>
+          <button id="info-buton" type="button" name="button">Email Me</button>
+        </div>
+        <div class="pic-container">
+          <div class="pic1" id="pic">
+            <div class="gradient1"></div>
+            <img src="../images/me2.jpg">
+          </div>
+          <div class="pic2" id="pic">
+            <img src="../images/me1.jpg">
+          </div>
+          <div class="pic3" id="pic">
+            <div class="gradient2"></div>
+            <img src="../images/me3.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-block2">
+        <div class="space"></div>
+        <div class="hero">
+          <div class="content">
+            <div class="block2-item-container">
+              <div class="block2-item1">
+                <h2 id="block2-text1">─ MY BACKGROUND</h2>
+                <p id="block2-text2">I have gone through many stages in my carrer as a website developer and worked on many projects that I have gained knowledge from. I strongly beleive that my number one virtue is my ability to adapt to any challenge in my way.</p>
+              </div>
+
+              <div class="block2-item2">
+                <h2 id="block2-text1">─ MY SKILLS</h2>
+                  <p id="block2-text3">Critical Thinking</p>
+                  <p id="block2-text3">Communication</p>
+                  <p id="block2-text3">Leadership</p>
+                  <p id="block2-text3">Problem Assesment</p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="experience" class="mid-block3">
+        <div class="block3-grid-container">
+          <div id="block3-item" class="block3-item1">
+            <h3 id="block3-text1">― WORK EXPERIENCE</h3>
+          </div>
+          <div id="block3-item" class="block3-item2">
+            <div class="block3-item2-flex1">
+              <h4 id="block3-text2">Senior Project Manager</h4>
+              <h5 id="block3-text3">Google / September 2016 - Presnet</h5>
+              <h5 id="block3-text3">I was responsible for overseeing the planning and implementation of an entire project through budgeting, hiring team members, sourcing suppliers and planning the project release.</h5>
+            </div>
+            <div class="block3-item2-flex2">
+              <h4 id="block3-text2">Senior Software Developer</h4>
+              <h5 id="block3-text3">Facebook / Febuary 2012 - July 2016</h5>
+              <h5 id="block3-text3">I conceived of, designed, and built computer programs. I also developed new applications for mobile or desktop use and underlying operating systems. My main purpose was to identify user needs, build programs, test out new software, and make improvements.</h5>
+            </div>
+          </div>
+          <div id="block3-item" class="block3-item3">
+            <h3 id="block3-text1">― EDUCATION</h3>
+          </div>
+          <div id="block3-item" class="block3-item4">
+            <div class="block3-item4-flex1">
+              <h4 id="block3-text2">Ozarks Technical Community College</h4>
+              <h5 id="block3-text3">Computer Science Certificate / 2020 - 2022</h5>
+            </div>
+            <div class="block3-item4-flex2">
+              <h4 id="block3-text2">Pleasant Hope High School</h4>
+              <h5 id="block3-text3">Diploma / 2018 - 2022</h5>
+            </div>
+          </div>
+          <div id="block3-item" class="block3-item5">
+            <h3 id="block3-text1">― COURSES</h3>
+          </div>
+          <div id="block3-item" class="block3-item6">
+            <h4 id="block3-text2">Math 55</h4>
+            <h5 id="block3-text3">Harvard 2020-2022</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-block4">
+        <div class="mid-block4-gap1"></div>
+        <div class="mid-block4-text-container">
+          <h2 class="2.2em">"I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."</h2>
+          <h3 class="1em">- Albert Einstein</h3>
+        </div>
+        <div class="mid-block4-gap2"></div>
+      </div>
+
+      <div id="projects" class="mid-block5">
+        <h3 id="project-title">― PROJECTS</h3>
+        <div class="block5-grid-container">
+          <div id=proj class="proj1"><p id="block5-text">Google Virtual Machine</p></div>
+          <div id=proj class="proj2"><p id="block5-text">Animation Techniques</p></div>
+          <div id=proj class="proj3"><p id="block5-text">Iphone Design</p></div>
+          <div id=proj class="proj4"><p id="block5-text">Shop Website</p></div>
+        </div>
+      </div>
+
+      <div class="mid-block6">
+        <div class="block6-grid-container">
+          <div class="block6-item1">
+            <h2 id="block6-title">Let's Talk</h2>
+            <h3 id="block6-text">Name</h3>
+            <input type="text" class="block6-button1" id="block6-input" name="Name" placeholder="Your name">
+            <h3 id="block6-text">Your Email*</h3>
+            <input type="text" id="block6-input" name="Email" placeholder="Your email addess" required>
+            <h3 id="block6-text">Message*</h3>
+            <textarea name="Message" placeholder="Enter your message" required></textarea>
+            <button type="submit" id="block6-button" name="button">Submit</button>
+          </div>
+
+          <div class="block6-item2">
+            <img id="block6-img" src="../images/me2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <footer id="Contacts">
+      <div class="footer-item1">
+        Josh D.
+      </div>
+
+      <div class="footer-item2">
+        <h3 id="footer-text1">― SOCIALS</h3>
+        <h5 id="footer-text2">Facebook</h5>
+        <h5 id="footer-text2">Twitter</h5>
+        <h5 id="footer-text2">Instagram</h5>
+      </div>
+
+      <div class="footer-item3">
+        <h3 id="footer-text1">― CONTACTS</h3>
+        <h5 id="footer-text3">.</h5>
+        <h5 id="footer-text2">WebDev@gmail.com</h5>
+        <h5 id="footer-text2">(417) 897-1234</h5>
+      </div>
+    </footer>
+
+    <div id="pseudoChatbot" class="psuedoChatbot" onclick="Visible()">
+      <div class="newMessage">1</div>
+    </div>
+
+
+  </body>
+</html>

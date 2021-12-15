@@ -1,0 +1,518 @@
+body,html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #f2f5f7;
+}
+.mid{
+  position: relative;
+  width: 100%;
+  height: 500%;
+}
+/* make block heights a percentage of 100 then divied by 5 since
+the original block was 100% but changed to 500%, an increase of 5
+
+Quick Measurements
+
+OLD   NEW
+70% = 14%
+50% = 10%
+20% = 4%
+
+*/
+.mid-block1{
+  width: 100%;
+  height: 22%;
+  background: transparent;
+  display: block;
+  justify-content: center;
+  min-height: 100vh;/*absolutely no idea why this is here but it looks weird without it*/
+}
+
+
+
+/*  INFO  */
+#info-text1{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 5vh;
+  color: rgba(0,0,0,0.7);
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+#info-buton{
+  position: relative;
+  width: 15vh;
+  height: 15%;
+  left: 15%;
+  top: 20%;
+  border-radius: 5px;
+  border: none;
+  background:rgba(29,66,112,0.8);
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.7vh;
+  cursor: grab;
+}
+/* INFO END  */
+
+
+
+/*  BACKGROUND  */
+.space{
+  position: relative;
+  width: 100%
+}
+.block2-item-container{
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  position: relative;
+}
+.block2-item1{
+  width: 100%;
+  padding: 0 15vw 0 10vw;
+}
+.block2-item2{
+  width: 70%;
+  padding: 0 0 0 10vw;
+}
+.space{
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background: white;
+}
+.hero {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 500px;
+  background-color: white;
+  animation: hero 5s infinite;
+}
+@keyframes hero {
+  0%{clip-path: ellipse(105% 70% at 76.3% 0%);}
+  50%{clip-path: ellipse(105% 70% at 86.3% 0%);}
+  100%{clip-path: ellipse(105% 70% at 76.3% 0%);}
+}
+#block2-text1{
+  color: rgba(72,139,250,0.9);
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+#block2-text2{
+  color: rgba(72,139,250,0.8);
+  font-size: 1.1em;
+  font-weight: 100;
+  color: rgba(0,0,0,0.6);
+  letter-spacing: 0.4px;
+  word-spacing: 2px;
+  line-height: 22px;
+}
+#block2-text3{
+  color: rgba(72,139,250,0.8);
+  font-size: 1.1em;
+  font-weight: 100;
+  color: rgba(0,0,0,0.6);
+  letter-spacing: 0.4px;
+  word-spacing: 2px;
+  line-height: 30px;
+}
+/*  BACKGROUND END  */
+
+
+
+/*  EDUCATION  */
+.block3-grid-container{
+  position: relative;
+  top: 5%;
+  display: grid;
+  width: calc(70vw + 50px);
+  height: 90%;
+  grid-template-columns: 30vw 80vh;
+  column-gap: 10px;
+  row-gap: 50px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+#block3-item{
+  /*background: rgba(0,0,0,0.2);*/
+}
+#block3-text1{
+  color: rgba(20,139,220,1);
+  padding-left: 20%;
+}
+#block3-text2{
+  color: rgba(0,0,0,0.7);
+  font-weight: 500;
+  font-size: 2.5vh;2
+}
+#block3-text3{
+  color: rgba(0,0,0,0.7);
+  font-weight: 500;
+  font-size: 2vh;
+}
+.block3-item2{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.block3-item4{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+/*  EDUCATION END  */
+
+
+/*  CONTACT  */
+
+.block6-grid-container{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100%;
+}
+.block6-item1{
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  line-height: 30px;
+}
+#block6-button{
+  width: 120px;
+  height: 50px;
+  border: none;
+  background: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+  cursor: grab;
+  font-size: 1em;
+  font-weight: 600;
+}
+#block6-input{
+  background: rgba(50,50,50,0.1);
+  height: 6%;
+  width: 100%;
+  padding: 5px 15px;
+  outline: none;
+}
+.block6-button1{
+  border: none;
+}
+textarea{
+  border: none;
+  background: rgba(50,50,50,0.1);
+  height: 10%;
+  width: 100%;
+  max-width: 120%;
+  min-width: 50%;
+  max-height: 15%;
+  min-height: 3%;
+  padding: 5px 15px;
+  outline: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+input:required, textarea:required{
+  border: 1px dashed rgba(245, 63, 54,0.6);
+}
+#block6-text{
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: 5%;
+  font-weight: 400;
+  margin-right: 49%;
+  color: rgba(0,0,0,0.7);
+}
+#block6-title{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3em;
+  margin-bottom: 20%;
+}
+.block6-item2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#block6-img{
+  width: 100%;
+  margin-right: 20%;
+  border-radius: 20%;
+}
+
+/*  CONTACT END  */
+
+/*  PROJECTS  */
+#project-title{
+  color: rgba(20,139,220,1);
+  width: 100%;
+  height: 10%;
+  padding-left: 40%;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+/*  PROJECT END  */
+.mid-block2{
+  width: 100%;
+  height: 10%;
+  background: #4ebff3;
+  box-shadow: 0px 0px 30px 10px rgba(100,100,100,0.2);
+  animation: block2-background ease 5s infinite;
+  /* shadow for subtle shadow, as to not have a harsh grey to white transition */
+}
+@keyframes block2-background {
+  0%{background: rgb(78,191,243)}
+  50%{background: #7cd0f7}
+  100%{background: rgb(78,191,243)}
+}
+.mid-block3{
+  width: 100%;
+  height: 27%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid-block4{
+  width: 100%;
+  height: 7%;
+  background: #50b6ff;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px 20px rgba(200,200,200,0.1);
+}
+[class="2.2em"]{
+   font-size: 3.6vh;
+   word-wrap: break-word;
+}
+[class="1em"]{
+   font-size: 2.3vh;
+   font-weight: 100;
+   margin-top: 3%;
+}
+.mid-block4-text-container{
+  position: relative;
+  width: 100%;
+  float: left;
+}
+.mid-block4-gap1{
+  position: relative;
+  width: calc(30% - 100px);
+}
+.mid-block4-gap2{
+  position: relative;
+  width: calc(30% - 100px);
+}
+.mid-block5{
+  width: 100%;
+  height: 21%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mid-block6{
+  width: 100%;
+  height: 15%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 0px 30px 20px rgba(200,200,200,0.1);
+}
+.header-space{
+  width: 100%;
+  height: 80px;
+}
+.info{
+  height: 30%;
+  width: 100%;
+}
+
+.gradient1{
+  background: linear-gradient(90deg, rgba(242,245,247,1) 10%, rgba(0,0,0,0) 85%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4
+}
+.gradient2{
+  background: linear-gradient(-90deg, rgba(242,245,247,1) 10%, rgba(0,0,0,0) 85%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4
+}
+
+
+.pic1{
+  position: relative;
+  overflow: hidden;
+}
+.pic1 img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*margin: -25% 0px 0px -40%;*/
+}
+.pic2{
+  position: relative;
+  overflow: hidden;
+}
+.pic2 img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*margin: -20% 0px 0px -20%;*/
+}
+.pic3{
+  position: relative;
+  overflow: hidden;
+}
+.pic3 img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*margin: -5% 0px 0px -15%;*/
+}
+#pic{
+  position: relative;
+  min-width: 5vh;
+  min-height: 10vh;
+  max-height: 100vw;
+  max-width: 100vw;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 5%;
+  background-size: cover;
+  flex-shrink: 0;/*doesn't shirnk even if it is too wide*/
+}
+.pic-container{
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  column-gap: calc(10vw - 50px);
+  justify-content: center;
+}
+
+/* PROJECTS START*/
+.block5-grid-container{
+  /*border: 1px solid red;*/
+  height: 60%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  column-gap: 10vw;
+  row-gap: 10vh;
+  justify-content: center;
+}
+.project-text{
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(74,170,240,0.9);
+
+}
+#proj{
+  /*background: red*/ /* projects */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  transition: all 0.5s ease;
+}
+#proj:hover{
+  transform: scale(1.1);
+  font-size: 0.9em;
+  cursor: grab;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.3);
+}
+#block5-text{
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 110%;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(0,170,250,1);
+  font-size: 1.1em;
+}
+#proj1{
+  /*background: blue;*//* main border between projects */
+}
+.proj1{
+  background: url("../images/proj2.png");
+}
+.proj2{
+  background: url("../images/proj3.png");
+}
+.proj3{
+  background-image: linear-gradient(-180deg,rgba(0,0,0,0) 85%,#383442 15%),url("../images/proj1.png");
+}
+.proj4{
+  background: url("../images/proj4.png");
+}
+/* PROJECT END */
+
+
+/*  FOOTER  */
+.footer-item1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-item2{
+  margin-left: 20%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.6em;
+  display: flex;
+  flex-direction: column;
+}
+.footer-item3{
+  margin-left: 0%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.6em;
+  display: flex;
+  flex-direction: column;
+
+}
+#footer-text1{
+  font-size: 0.825em;
+  letter-spacing: 1px;
+}
+#footer-text2{
+  font-size: 0.9em;
+  text-decoration: underline;
+  cursor: grab;
+}
+#footer-text3{
+  visibility: hidden;
+}
+h5{
+  margin: 0;
+  margin-top: 5px;
+}
+
+/*  FOOER END */
